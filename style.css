@@ -1,4 +1,6 @@
 /*
+Edited by eondev, jul 2014
+
 Theme Name: Sparkling
 Theme URI: http://colorlib.com/wp/themes/sparkling
 Author: Colorlib
@@ -72,8 +74,8 @@ a:focus {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #DA4453;
-  font-weight: 700;
-  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -464,7 +466,7 @@ hr.section-divider {
        -o-transition: opacity 0.3s linear;
           transition: opacity 0.3s linear;
   display: block;
-  margin: auto;
+  width: 100%;
 }
 .single-featured:hover {
   opacity: 0.8;
@@ -510,7 +512,7 @@ object {
 }
 .widget ul {
   padding: 0;
-  line-height: 18px;
+  line-height: 10px;
   font-size: 14px;
 }
 .widget ul.nav.nav-tabs {
@@ -529,9 +531,13 @@ object {
 }
 #secondary .widget_archive ul li:before,
 #secondary .widget_categories ul li:before,
-#secondary .widget_recent_comments ul li:before {
+#secondary .widget_recent_comments ul li:before ,
+#secondary .widget_recent_entries ul li:before{
   font-family: fontawesome;
   margin-right: 10px;
+}
+#secondary .widget_recent_entries ul li:before {
+  content: '\f15c';
 }
 #secondary .widget_archive ul li:before {
   content: '\f073';
@@ -552,12 +558,14 @@ object {
 #secondary .widget > h3 {
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   margin-top: 0;
   color: #636467;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 10px;
 }
 #secondary .widget a {
-  color: #C1C0C0;
+  color: #DA4453;
 }
 .widget ul ul {
   padding: 10px;
@@ -790,7 +798,7 @@ button:hover {
   text-transform: uppercase;
 }
 .navbar.navbar-default {
-  background-color: #363636;
+  background-color: #DA4453;
   font-family: 'Open Sans', serif;
   margin-bottom: 0;
   font-weight: 500;
@@ -799,13 +807,28 @@ button:hover {
   color: #F5F7FA;
   line-height: 40px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
 }
 .navbar > .container .navbar-brand {
-  color: #DADADA;
-  font-size: 20px;
-  margin: 13px 0;
-  font-family: 'Roboto Slab', serif;
+  color: #fff;
+  font-size: 48px;
+  margin: 30px 0;
+  font-family: 'Lobster', Helvetica, Arial, sans-serif;
+}
+@media (max-width: 1024px) {
+    .navbar > .container .navbar-brand {
+      font-size: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .navbar > .container .navbar-brand {
+      font-size: 36px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar > .container .navbar-brand {
+      font-size: 28px;
+    }
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -827,7 +850,7 @@ button:hover {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #DA4453;
+  /*color: #DA4453;*/
   background-color: transparent;
 }
 .dropdown-menu > li > a:hover,
@@ -836,6 +859,12 @@ button:hover {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
   color: #fff;
   background-color: #DA4453;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle {
+border-color: transparent;
 }
 .dropdown-menu {
   font-size: 13px;
@@ -880,7 +909,7 @@ button:hover {
   padding: 0;
 }
 .navbar-nav > li > a {
-  padding-top: 18px;
+  padding-top: 34px;
   padding-bottom: 18px;
 }
 
@@ -1167,7 +1196,7 @@ p.logged-in-as {
   overflow: hidden;
 }
 .copyright {
-  margin-top: 10px;
+  margin-right: 10px;
   float: right;
   text-align: right;
 }

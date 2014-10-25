@@ -27,8 +27,8 @@
 						<?php sparkling_footer_links(); ?>
 					</nav>
 					<div class="copyright col-md-6">
-						<?php echo of_get_option( 'custom_footer_text', 'sparkling' ); ?>
-						<?php sparkling_footer_info(); ?>
+                        &copy; <?php print date('Y'); ?> UtileDilettevole.info |
+						<a href="<?php echo esc_url(home_url('/credits')); ?>">Credits</a>
 					</div>
 				</div>
 			</div><!-- .site-info -->

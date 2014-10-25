@@ -13,7 +13,7 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<article id="post-<?php the_ID(); ?>" <?php print get_post_class() . ' col-md-6'; ?>>
 						<div class="entry-content">
 							<?php the_content(); ?>
 							<?php
